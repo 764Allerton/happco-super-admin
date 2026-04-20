@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "superadmin-3011",
+      "script": "corporate.js",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "time": true,
+      "exec_mode": "fork"
+    }
+  ]
+}

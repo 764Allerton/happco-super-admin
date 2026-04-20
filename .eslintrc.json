@@ -1,0 +1,42 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": ["react", "jsx-a11y"],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "globals": {
+        "URLSearchParams": "readonly",
+        "FormData": "readonly",
+        "setTimeout": "readonly",
+        "document": "readonly",
+        "console": "readonly"
+    },
+    "rules": {
+      "react/prop-types": "off",
+      "jsx-a11y/media-has-caption": "off",
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
+      "camelcase": [
+        "error",
+        {
+          "properties": "never",
+          "ignoreDestructuring": true,
+          "allow": ["^(_|[a-z]+|[a-z]+_[a-z]+)$"] // Regular expression pattern for both camelCase and snake_case
+        }
+      ],
+      "func-names": ["error", "never"],
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "react/jsx-props-no-spreading": "off"
+    }
+  }
+  

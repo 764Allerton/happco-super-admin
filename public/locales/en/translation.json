@@ -1,0 +1,106 @@
+{
+    "welcome": "Welcome!",
+    "Hi": "Hi",
+    "auth": {
+        "signIn": {
+            "title": "Please Login to continue"
+        },
+        "SignUp": {
+            "signUp": "SignUp",
+            "firstName": "First Name",
+            "LastName": "Last Name",
+            "email": "Email",
+            "contact": "Contact Number",
+            "password": "Password",
+            "confirmPassword": "Confirm Password"
+        },
+        "forgot": {
+            "title": "Forgot Password"
+        },
+        "otp": {
+            "title1": "We have sent a 4-digit verification code",
+            "title2": "on your Email",
+            "notCode": "Didn't receive the code?",
+            "resend": "Resend"
+        },
+        "reset": {
+            "resetPassword": "Reset Password",
+            "title": "Create a new password to login into",
+            "title1": "your account."
+        }
+    },
+    "inputLabels": {
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot Password",
+        "oldPassword": "Old Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password"
+    },
+    "buttons": {
+        "login": "Login",
+        "addNew": "Add New",
+        "update": "Update",
+        "profile": "Profile",
+        "logout": "Logout",
+        "changePass": "Change Password",
+        "edit": "Edit",
+        "addFaq": "Add FAQ",
+        "submit": "Submit",
+        "contiune": "Contiune",
+        "verify": "Verify and Contiune",
+        "confirm": "Confirm",
+        "deleteKey": "Delete",
+        "cancel": "Cancel"
+    },
+    "dashboard": {
+        "users": "Total Users",
+        "swipe": "Total Swipe",
+        "profile": "Profile",
+        "logout": "Logout",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "breadcrumb": {
+        "dashboard": "Dashboard",
+        "personalInfo": "Personal Information",
+        "userDetail": "User Details"
+    },
+    "sideList": {
+        "dashboard": "Dashboard",
+        "userProfile": "Profile",
+        "users": "Users",
+        "faq": "FAQ",
+        "about": "About Us"
+    },
+    "search": "Search",
+    "users": {
+        "users": "Users",
+        "user": "User",
+        "profile": "Profile Image",
+        "name": "Name",
+        "email": "Email",
+        "phNumber": "Phone Number",
+        "status": "Status",
+        "action": "Action",
+        "department": "Department",
+        "division": "Division"
+    },
+    "toastMessage": {
+        "email": "Please Enter Email",
+        "password": "Please Enter Password",
+        "passwordValidation": "Password must contain at least one special character",
+        "newPassword": "Please confirm your password",
+        "newPasswordMatch": "The new password that you entered do not match!",
+        "firstName": "Please enter your first name.",
+        "lastName": "Please enter your last name.",
+        "emailAddress": "Please enter your email address.",
+        "contactNumber": "Please enter your contact number.",
+        "confirmPassword": "Please confirm your password.",
+        "alreadyLogin": "Already Member? Login",
+        "dontAccSingup": "Don't have an account? Sign Up",
+        "delete": "Are you sure you want to Delete",
+        "this": "this",
+        "selectionRequired": "Choose your type"
+    }
+}

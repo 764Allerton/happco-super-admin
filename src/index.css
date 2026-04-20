@@ -1,0 +1,518 @@
+/*  *************************** Tailwind Css ******************************** */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    *,
+    body {
+        @apply font-sans box-border;
+        font-family: 'Avenir', sans-serif !important;
+    }
+
+    html {
+        --defaultDarkColor: #749B98;
+        --defaultLightColor: #86A9A6;
+        --defaultDarkThemeColor: '#749B98';
+        --defaultDarkColorChat1: '#BEDFD5'
+    }
+
+    /* in this  example only 2 font family You can add more  Font Family url or path */
+    @font-face {
+        font-family: 'Avenir';
+        src: url('./Assets/Font/Avenir_TTF/Avenir-Book-01.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Avenir-Black';
+        src: url('./Assets/Font/Avenir_TTF/Avenir-BlackOblique-04.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    ::-webkit-scrollbar {
+        height: 9px;
+        width: 8px
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #d9dcd7
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--defaultLightColor);
+        border-radius: 3px
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--defaultDarkColor)
+    }
+}
+
+@layer components {
+    .flexCenter {
+        @apply flex justify-center items-center;
+    }
+
+    /* .logo {
+        @apply smMin: !w-[5rem]
+    } */
+
+    .customBorder {
+        @apply border border-solid
+    }
+
+    /************************   Auth Css Classes START ***************/
+    .authPage {
+        @apply flexCenter
+        /* @apply bg-cover bg-no-repeat min-h-screen xl:h-content relative flex-col flexCenter justify-center overflow-y-auto */
+    }
+
+    .cardAuth {
+        @apply bg-defaultWhiteColor shadow-md font-sans font-thin font-normal opacity-90 z-20 items-center flex flex-col rounded relative;
+    }
+
+    .authButton {
+        @apply bg-defaultDarkColor rounded-full text-defaultWhiteColor font-semibold uppercase text-sm md:text-base px-6 py-5 mt-4;
+    }
+
+    .dark .authButton {
+        @apply !bg-white text-defaultDarkColor
+    }
+
+    .commonButton {
+        @apply bg-defaultWhiteColor border-2 rounded-full text-defaultDarkColor font-semibold uppercase text-sm md:text-base px-6 py-5;
+    }
+
+    .light .commonButton {
+        @apply border-defaultDarkColor
+    }
+
+    .dark .commonButton {
+        @apply bg-defaultLightColor text-white
+    }
+
+    .authInput {
+        @apply bg-defaultWhiteColor shadow-md h-12 text-defaultBlackColor drop-shadow-lg
+    }
+
+    /************************   Auth Css Classes END ***************/
+
+    /* **************************** Header Css  ************************** */
+    .headerStyle {
+        @apply h-[92px] px-[30px] z-[12]
+    }
+
+    .light .headerStyle {
+        @apply bg-defaultWhiteColor shadow-md
+    }
+
+    .dark .headerStyle {
+        box-shadow: 0px 14px 8px -16px #fff !important;
+    }
+
+    .light .headerStyleAuth {
+        @apply bg-defaultWhiteColor shadow-md
+    }
+
+    .dark .headerStyleAuth {
+        @apply text-defaultWhiteColor
+    }
+
+    .dark .cardAuth {
+        @apply bg-defaultDarkThemeColor text-defaultWhiteColor
+    }
+
+    .light .cardAuth {
+        @apply bg-defaultWhiteColor text-defaultBlackColor
+    }
+
+
+    .dark .ant-form-item .ant-form-item-label>label {
+        @apply text-defaultWhiteColor
+    }
+
+    .light .content {
+        @apply p-5 bg-defaultWhiteColor overflow-y-auto overflow-hidden
+    }
+
+    .dark .content {
+        @apply p-5 bg-defaultDarkThemeColor overflow-y-auto overflow-hidden
+    }
+
+
+    .backAuth {
+        @apply absolute top-[2%] left-[2%] text-defaultDarkColor text-[1.8rem] cursor-pointer;
+    }
+
+    .logoHeader {
+        @apply mx-2.5 w-[4rem] h-[80%] lg:w-[4rem] flexCenter
+    }
+
+    .textStyle {
+        @apply text-defaultDarkColor
+    }
+
+    .dark .textStyle {
+        @apply !text-defaultWhiteColor
+    }
+
+    .dark .ant-table {
+        @apply bg-defaultDarkThemeColor text-defaultWhiteColor
+    }
+
+    .dark .ant-collapse-content {
+        @apply bg-defaultDarkColor
+    }
+
+    .avtar {
+        @apply border border-defaultLightColor shadow-lg border-opacity-100 rounded-md italic h-12 px-6 items-center flex bg-defaultWhiteColor;
+    }
+
+    .inputStyle {
+        @apply bg-defaultWhiteColor shadow-custom h-[3rem] text-black;
+    }
+
+    .otp_container {
+        @apply justify-center
+    }
+
+    .otp_input_container {
+        @apply border-none rounded-sm shadow-custom text-2xl h-[3.5rem] mt-0 m-[0.8rem] p-4 w-[3.5rem];
+        width: 3.5rem !important;
+    }
+
+    .dark .otp_input_container {
+        @apply text-defaultBlackColor
+    }
+
+    .lgScreen {
+        @apply gap-1 hidden md:flexCenter
+    }
+
+    .menuIcons.dark {
+        @apply text-defaultWhiteColor
+    }
+
+    .menuIcons {
+        @apply flex md:hidden
+    }
+
+    .dark .ant-drawer-close {
+        @apply text-defaultWhiteColor
+    }
+
+    .CollapseStyle.ant-collapse {
+        @apply border-none
+    }
+
+    .light .backgroundShadow {
+        @apply shadow-custom bg-defaultWhiteColor;
+    }
+
+    .dark .backgroundShadow {
+        @apply shadow-custom bg-defaultDarkColor text-defaultWhiteColor;
+    }
+
+    .backgroundShadow .jodit-container.jodit.jodit_theme_default.jodit-wysiwyg_mode {
+        @apply bg-none border-none
+    }
+
+    .backgroundShadow .jodit-status-bar.jodit-status-bar_resize-handle_true {
+        @apply hidden
+    }
+
+    .backgroundShadow .jodit-add-new-line {
+        @apply hidden
+    }
+
+    .searchField>input {
+        @apply bg-transparent outline-none border-none px-1 overflow-x-auto;
+    }
+
+    .searchField {
+        @apply shadow-custom bg-white;
+    }
+
+    .flexBetween {
+        @apply flex justify-between flex-wrap items-center;
+    }
+
+    .light .viewIcon {
+        @apply cursor-pointer text-defaultDarkColor bg-defaultLightSlideColor text-2xl rounded-full p-1;
+    }
+
+    .dark .viewIcon {
+        @apply cursor-pointer text-defaultLightColor text-2xl rounded-full p-1 bg-gray-200;
+    }
+
+    .viewIconEdit {
+        @apply text-gray-400 cursor-pointer text-2xl bg-gray-200 rounded-full p-1;
+    }
+
+    .viewIconDel {
+        @apply text-red-400 cursor-pointer text-2xl bg-red-200 rounded-full p-1;
+    }
+
+    .commonButtonBgBorder {
+        @apply border-2 border-defaultColorDark text-blackColor bg-whiteColor;
+    }
+
+    .commonButtonBgBorder:hover {
+        @apply text-whiteColor;
+    }
+
+    .slider li.ant-menu-item.ant-menu-item-only-child {
+        @apply h-12 rounded-none mx-[0px] pl-[24px]
+    }
+
+    .selectedMenuC {
+        @apply bg-gray-400
+    }
+
+    .dark .ant-collapse-header {
+        @apply !text-defaultWhiteColor
+    }
+
+    .dark .ant-collapse-content-box {
+        @apply !text-defaultWhiteColor
+    }
+
+    .dark .ant-table-cell-row-hover {
+        @apply !text-defaultBlackColor
+    }
+
+    .sideIcon {
+        @apply text-lg text-defaultLightColor
+    }
+
+    .sideIconSelect {
+        @apply text-lg text-white
+    }
+
+    li.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child .sideIcon {
+        @apply text-defaultDarkColor
+    }
+
+    .slider li.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+        @apply bg-defaultLightSlideColor border-l-4 border-defaultDarkColor rounded-none mx-[0px] bg-defaultDarkColor text-defaultDarkColor font-bold pl-[24px];
+    }
+
+    .customSiderWidth {
+        @apply !flex-none !basis-[230px] !max-w-[230px] !min-w-[230px] !w-[230px] mdMin:hidden
+    }
+
+    .dark .ant-drawer-content {
+        @apply bg-defaultDarkThemeColor text-defaultWhiteColor
+    }
+
+    .dark .ant-layout .ant-layout-sider {
+        @apply bg-defaultDarkThemeColor
+    }
+
+    .light .ant-layout .ant-layout-sider {
+        @apply bg-defaultWhiteColor
+    }
+
+    .dark .ant-menu-item {
+        @apply text-defaultWhiteColor !important;
+    }
+
+    .light .ant-menu-item {
+        @apply text-defaultBlackColor !important;
+    }
+
+    .light .ant-menu {
+        @apply bg-defaultWhiteColor text-defaultBlackColor
+    }
+
+    .dark .ant-menu {
+        @apply bg-defaultDarkThemeColor text-defaultDarkColor
+    }
+
+    .jn {
+        @apply bg-forgotBg bg-cover bg-center h-screen overflow-y-auto grid items-center
+    }
+
+    .dark .ant-modal-content {
+        @apply bg-defaultDarkColor;
+        /* Replace with Tailwind classes for the desired background color */
+    }
+
+    .dark .ant-modal-header {
+        @apply bg-transparent;
+        /* If you want to remove the background color */
+    }
+
+    .dark .ant-modal-title {
+        @apply text-defaultWhiteColor;
+        /* Adjust text color */
+    }
+
+    .dark .selectedBox {
+        @apply !bg-defaultLightColor;
+    }
+
+    .light .selectedBox {
+        @apply !bg-defaultDarkColor;
+    }
+
+    .imgStyle.ant-image-img {
+        @apply w-auto;
+    }
+
+    .light .userTypeSelectedClass {
+        @apply text-defaultDarkColor
+    }
+
+    .dark .userTypeSelectedClass {
+        @apply text-white
+    }
+
+    .light .empTypeSelectedClass {
+        @apply !bg-defaultDarkColor text-white
+    }
+
+    .dark .empTypeSelectedClass {
+        @apply !bg-defaultLightColor text-white
+    }
+
+    .light .drwSelected {
+        @apply p-0.5 bg-defaultDarkColor
+    }
+
+    .dark .drwSelected {
+        @apply p-0.5 bg-white text-defaultLightColor
+    }
+
+    .dark .tablehead {
+        @apply bg-[#424f46]
+    }
+
+    .light .tablehead {
+        @apply bg-defaultDarkColor
+    }
+
+    .dashCompanyBox {
+        @apply border-2 bg-white h-[100px] rounded-[14px]
+    }
+}
+
+
+/************************************************* Antd Overwritten Classes **************************************************/
+.ant-table-thead .ant-table-cell {
+    background-color: var(--defaultLightColor) !important;
+    color: white !important;
+}
+
+.ant-switch {
+    background-color: grey !important;
+}
+
+.switchTheme .ant-switch {
+    background-color: rgba(128, 128, 128, 0.452) !important;
+}
+
+
+.ant-table-wrapper .ant-table-cell-fix-left {
+    background: inherit;
+}
+
+.ant-switch.ant-switch-checked {
+    background: var(--defaultLightColor) !important;
+}
+
+.ant-dropdown.ant-dropdown-placement-bottom {
+    width: 153px !important;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+}
+
+.customSiderWidth .ant-layout-sider-trigger {
+    background: var(--defaultDarkColor) !important;
+    width: 230px !important;
+}
+
+.dark .ant-layout-sider-dark.customSiderWidth {
+    box-shadow: 14px 0px 8px -16px #fff !important;
+}
+
+.ant-breadcrumb ol {
+    align-items: center;
+}
+
+.ant-form-item-label {
+    padding: 0px !important
+}
+
+.ant-menu {
+    height: auto !important;
+    max-height: 86vh !important;
+    overflow-y: auto !important;
+}
+
+.ant-menu::-webkit-scrollbar {
+    display: none !important;
+}
+
+.ant-menu-title-content {
+    display: flex !important;
+}
+
+.textStyle {
+    font-family: 'Avenir-Black', sans-serif !important;
+}
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    border: none !important;
+    background-color: var(--defaultDarkColor) !important
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--defaultDarkColor) !important;
+    border-color: var(--defaultDarkColor) !important
+}
+
+.ant-pagination-item-active a {
+    color: var(--defaultDarkColor) !important;
+}
+
+.ant-pagination-item-active {
+    border-color: var(--defaultDarkColor) !important;
+}
+
+/* .ant-select-selector{
+    background-color: #BEDFD5 !important;
+    border:none !important
+} */
+
+.input__ {
+    background-color: #fbfcff;
+    background-color: var(--defaultwhitecolor);
+    box-shadow: 0 8px 24px hsla(210, 8%, 62%, .2);
+    height: 3rem;
+    color: black !important;
+}
+
+.commonBoxShadow {
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
+}
+
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ant-table-pagination-right {
+    padding-right: 20px !important;
+}
+
+.tippy-box[data-theme~='htp'] {
+    background-color: #f2f2f2;
+    color: black;
+}
